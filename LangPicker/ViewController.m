@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LangPickerViewController.h"
 #import "AgreementViewController.h"
+#import "SettingViewController.h"
 #import "TSLanguageManager.h"
 
 @interface ViewController ()
@@ -28,6 +29,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self performSelector:@selector(loadLanguagePicker) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(loadSettingBtn) withObject:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -59,6 +61,20 @@
     AgreementViewController *agreement = [[AgreementViewController alloc] init];
     agreement.view.frame = self.view.bounds;
     [self presentViewController:agreement animated:YES completion:^(void){  }];
+}
+
+- (void)loadSettingBtn
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+        SettingViewController *setting = [[SettingViewController alloc] init];
+        setting.view.frame = self.view.bounds;
+        [self presentViewController:setting animated:YES completion:^(void){    }];
+    }
+    else
+    {
+        return;
+    }
 }
 
 @end

@@ -18,6 +18,7 @@
 		82E45E631B3B07CF00875633 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E621B3B07CF00875633 /* AgreementViewController.m */; };
 		82E45E681B3B280700875633 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82E45E6A1B3B280700875633 /* Localizable.strings */; };
 		82E45E751B3B296C00875633 /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E741B3B296C00875633 /* TSLanguageManager.m */; };
+		82E45E781B3B387F00875633 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E771B3B387F00875633 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		82E45E6C1B3B282700875633 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		82E45E731B3B296C00875633 /* TSLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLanguageManager.h; sourceTree = "<group>"; };
 		82E45E741B3B296C00875633 /* TSLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLanguageManager.m; sourceTree = "<group>"; };
+		82E45E761B3B387F00875633 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		82E45E771B3B387F00875633 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				82E45E5F1B3AF5BF00875633 /* LangPickerViewController.m */,
 				82E45E611B3B07CF00875633 /* AgreementViewController.h */,
 				82E45E621B3B07CF00875633 /* AgreementViewController.m */,
+				82E45E761B3B387F00875633 /* SettingViewController.h */,
+				82E45E771B3B387F00875633 /* SettingViewController.m */,
 				82E45E6A1B3B280700875633 /* Localizable.strings */,
 				82E45E421B3AF3F000875633 /* Main.storyboard */,
 				82E45E731B3B296C00875633 /* TSLanguageManager.h */,
@@ -246,6 +251,7 @@
 				82E45E601B3AF5BF00875633 /* LangPickerViewController.m in Sources */,
 				82E45E751B3B296C00875633 /* TSLanguageManager.m in Sources */,
 				82E45E411B3AF3F000875633 /* ViewController.m in Sources */,
+				82E45E781B3B387F00875633 /* SettingViewController.m in Sources */,
 				82E45E3E1B3AF3F000875633 /* AppDelegate.m in Sources */,
 				82E45E3B1B3AF3F000875633 /* main.m in Sources */,
 				82E45E631B3B07CF00875633 /* AgreementViewController.m in Sources */,
