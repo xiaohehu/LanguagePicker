@@ -14,6 +14,10 @@
 		82E45E461B3AF3F000875633 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82E45E451B3AF3F000875633 /* Images.xcassets */; };
 		82E45E491B3AF3F000875633 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82E45E471B3AF3F000875633 /* LaunchScreen.xib */; };
 		82E45E551B3AF3F100875633 /* LangPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E541B3AF3F100875633 /* LangPickerTests.m */; };
+		82E45E601B3AF5BF00875633 /* LangPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E5F1B3AF5BF00875633 /* LangPickerViewController.m */; };
+		82E45E631B3B07CF00875633 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E621B3B07CF00875633 /* AgreementViewController.m */; };
+		82E45E681B3B280700875633 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82E45E6A1B3B280700875633 /* Localizable.strings */; };
+		82E45E751B3B296C00875633 /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E741B3B296C00875633 /* TSLanguageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,17 @@
 		82E45E4E1B3AF3F100875633 /* LangPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LangPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E45E531B3AF3F100875633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82E45E541B3AF3F100875633 /* LangPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LangPickerTests.m; sourceTree = "<group>"; };
+		82E45E5E1B3AF5BF00875633 /* LangPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LangPickerViewController.h; sourceTree = "<group>"; };
+		82E45E5F1B3AF5BF00875633 /* LangPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LangPickerViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		82E45E611B3B07CF00875633 /* AgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
+		82E45E621B3B07CF00875633 /* AgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
+		82E45E641B3B241100875633 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		82E45E651B3B241100875633 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		82E45E691B3B280700875633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		82E45E6B1B3B281600875633 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		82E45E6C1B3B282700875633 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		82E45E731B3B296C00875633 /* TSLanguageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLanguageManager.h; sourceTree = "<group>"; };
+		82E45E741B3B296C00875633 /* TSLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLanguageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +100,14 @@
 				82E45E3D1B3AF3F000875633 /* AppDelegate.m */,
 				82E45E3F1B3AF3F000875633 /* ViewController.h */,
 				82E45E401B3AF3F000875633 /* ViewController.m */,
+				82E45E5E1B3AF5BF00875633 /* LangPickerViewController.h */,
+				82E45E5F1B3AF5BF00875633 /* LangPickerViewController.m */,
+				82E45E611B3B07CF00875633 /* AgreementViewController.h */,
+				82E45E621B3B07CF00875633 /* AgreementViewController.m */,
+				82E45E6A1B3B280700875633 /* Localizable.strings */,
 				82E45E421B3AF3F000875633 /* Main.storyboard */,
+				82E45E731B3B296C00875633 /* TSLanguageManager.h */,
+				82E45E741B3B296C00875633 /* TSLanguageManager.m */,
 				82E45E451B3AF3F000875633 /* Images.xcassets */,
 				82E45E471B3AF3F000875633 /* LaunchScreen.xib */,
 				82E45E381B3AF3F000875633 /* Supporting Files */,
@@ -182,6 +204,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 82E45E2C1B3AF3F000875633;
 			productRefGroup = 82E45E361B3AF3F000875633 /* Products */;
@@ -200,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82E45E441B3AF3F000875633 /* Main.storyboard in Resources */,
+				82E45E681B3B280700875633 /* Localizable.strings in Resources */,
 				82E45E491B3AF3F000875633 /* LaunchScreen.xib in Resources */,
 				82E45E461B3AF3F000875633 /* Images.xcassets in Resources */,
 			);
@@ -219,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82E45E601B3AF5BF00875633 /* LangPickerViewController.m in Sources */,
+				82E45E751B3B296C00875633 /* TSLanguageManager.m in Sources */,
 				82E45E411B3AF3F000875633 /* ViewController.m in Sources */,
 				82E45E3E1B3AF3F000875633 /* AppDelegate.m in Sources */,
 				82E45E3B1B3AF3F000875633 /* main.m in Sources */,
+				82E45E631B3B07CF00875633 /* AgreementViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +275,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				82E45E431B3AF3F000875633 /* Base */,
+				82E45E641B3B241100875633 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -256,8 +284,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				82E45E481B3AF3F000875633 /* Base */,
+				82E45E651B3B241100875633 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		82E45E6A1B3B280700875633 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82E45E691B3B280700875633 /* Base */,
+				82E45E6B1B3B281600875633 /* en */,
+				82E45E6C1B3B282700875633 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -352,6 +391,7 @@
 				INFOPLIST_FILE = LangPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -362,6 +402,7 @@
 				INFOPLIST_FILE = LangPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

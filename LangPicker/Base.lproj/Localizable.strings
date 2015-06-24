@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  LangPicker
+
+  Created by Xiaohe Hu on 6/24/15.
+  Copyright (c) 2015 Xiaohe Hu. All rights reserved.
+*/
+
+"Picker Title" = "Select a Language/选择一种语言";
+"EN Button" = "English";
+"ZH Button" = "中文";
+"Agreement Title" = "This Is User Agreement";
+"Agreement Button" = "I Agree";
