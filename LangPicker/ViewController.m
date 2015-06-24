@@ -13,7 +13,9 @@
 #import "TSLanguageManager.h"
 
 @interface ViewController ()
-
+{
+    UIButton        *uib_setting;
+}
 @end
 
 @implementation ViewController
@@ -24,6 +26,16 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadAgreement) name:@"finishedLang" object:nil];
     [TSLanguageManager setSelectedLanguage:kLMDefaultLanguage];
+    NSString *language = [NSString new];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"]) {
+        language = [[NSUserDefaults standardUserDefaults] objectForKey:@"language"];
+    }
+    if ([language isEqualToString:@"zh"]) {
+        [TSLanguageManager setSelectedLanguage:kLMChinese];
+    }
+    if ([language isEqualToString:@"en"]) {
+        [TSLanguageManager setSelectedLanguage:kLMEnglish];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -67,14 +79,24 @@
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
     {
-        SettingViewController *setting = [[SettingViewController alloc] init];
-        setting.view.frame = self.view.bounds;
-        [self presentViewController:setting animated:YES completion:^(void){    }];
+        uib_setting = [UIButton buttonWithType: UIButtonTypeCustom];
+        uib_setting.frame = CGRectMake(50.0, 668, 50, 50);
+        uib_setting.backgroundColor = [UIColor clearColor];
+        [uib_setting addTarget:self action:@selector(tapSettingBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [uib_setting setImage:[UIImage imageNamed:@"gear_icon.png"] forState:UIControlStateNormal];
+        [self.view addSubview: uib_setting];
     }
     else
     {
         return;
     }
+}
+
+- (void)tapSettingBtn:(id)sender
+{
+    SettingViewController *setting = [[SettingViewController alloc] init];
+    setting.view.frame = self.view.bounds;
+    [self presentViewController:setting animated:YES completion:^(void){    }];
 }
 
 @end

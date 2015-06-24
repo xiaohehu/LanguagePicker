@@ -6,8 +6,9 @@
   Copyright (c) 2015 Xiaohe Hu. All rights reserved.
 */
 
-"Picker Title" = "Select a Language";
-"EN Button" = "English";
-"ZH Button" = "中文";
-"Agreement Title" = "This Is User Agreement";
-"Agreement Button" = "I Agree";
+"Picker Title"      = "Select a Language";
+"EN Button"         = "English";
+"ZH Button"         = "中文";
+"Agreement Title"   = "This Is User Agreement";
+"Agreement Button"  = "I Agree";
+"Setting"           = "Setting";

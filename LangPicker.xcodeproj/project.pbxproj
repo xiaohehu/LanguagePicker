@@ -19,6 +19,8 @@
 		82E45E681B3B280700875633 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82E45E6A1B3B280700875633 /* Localizable.strings */; };
 		82E45E751B3B296C00875633 /* TSLanguageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E741B3B296C00875633 /* TSLanguageManager.m */; };
 		82E45E781B3B387F00875633 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E771B3B387F00875633 /* SettingViewController.m */; };
+		82E45E7A1B3B3DBB00875633 /* gear_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 82E45E791B3B3DBB00875633 /* gear_icon.png */; };
+		82E45E7D1B3B466300875633 /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E45E7C1B3B466300875633 /* SettingTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		82E45E741B3B296C00875633 /* TSLanguageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLanguageManager.m; sourceTree = "<group>"; };
 		82E45E761B3B387F00875633 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		82E45E771B3B387F00875633 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		82E45E791B3B3DBB00875633 /* gear_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_icon.png; sourceTree = "<group>"; };
+		82E45E7B1B3B466300875633 /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		82E45E7C1B3B466300875633 /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +114,13 @@
 				82E45E621B3B07CF00875633 /* AgreementViewController.m */,
 				82E45E761B3B387F00875633 /* SettingViewController.h */,
 				82E45E771B3B387F00875633 /* SettingViewController.m */,
+				82E45E7B1B3B466300875633 /* SettingTableViewController.h */,
+				82E45E7C1B3B466300875633 /* SettingTableViewController.m */,
 				82E45E6A1B3B280700875633 /* Localizable.strings */,
 				82E45E421B3AF3F000875633 /* Main.storyboard */,
 				82E45E731B3B296C00875633 /* TSLanguageManager.h */,
 				82E45E741B3B296C00875633 /* TSLanguageManager.m */,
+				82E45E791B3B3DBB00875633 /* gear_icon.png */,
 				82E45E451B3AF3F000875633 /* Images.xcassets */,
 				82E45E471B3AF3F000875633 /* LaunchScreen.xib */,
 				82E45E381B3AF3F000875633 /* Supporting Files */,
@@ -230,6 +238,7 @@
 				82E45E441B3AF3F000875633 /* Main.storyboard in Resources */,
 				82E45E681B3B280700875633 /* Localizable.strings in Resources */,
 				82E45E491B3AF3F000875633 /* LaunchScreen.xib in Resources */,
+				82E45E7A1B3B3DBB00875633 /* gear_icon.png in Resources */,
 				82E45E461B3AF3F000875633 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +261,7 @@
 				82E45E751B3B296C00875633 /* TSLanguageManager.m in Sources */,
 				82E45E411B3AF3F000875633 /* ViewController.m in Sources */,
 				82E45E781B3B387F00875633 /* SettingViewController.m in Sources */,
+				82E45E7D1B3B466300875633 /* SettingTableViewController.m in Sources */,
 				82E45E3E1B3AF3F000875633 /* AppDelegate.m in Sources */,
 				82E45E3B1B3AF3F000875633 /* main.m in Sources */,
 				82E45E631B3B07CF00875633 /* AgreementViewController.m in Sources */,
