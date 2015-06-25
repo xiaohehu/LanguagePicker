@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadAgreement) name:@"finishedLang" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLanguage) name:@"finishedLang" object:nil];
     [TSLanguageManager setSelectedLanguage:kLMDefaultLanguage];
     NSString *language = [NSString new];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"]) {
@@ -46,8 +46,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +62,18 @@
         LangPickerViewController *picker = [[LangPickerViewController alloc] init];
         picker.view.frame = self.view.bounds;
         [self presentViewController:picker animated:YES completion:^{   }];
+    }
+}
+
+- (void)updateLanguage
+{
+    NSLog(@"new language is set");
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"]) {
+        [self loadAgreement];
+    }
+    else
+    {
+        [self dismissViewControllerAnimated:YES completion:^(void){ }];
     }
 }
 

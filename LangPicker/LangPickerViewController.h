@@ -10,4 +10,6 @@
 
 @interface LangPickerViewController : UIViewController
 
+@property (nonatomic, readwrite)    BOOL        inSetting;
+
 @end

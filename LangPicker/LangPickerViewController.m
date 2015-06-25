@@ -20,6 +20,8 @@
 
 @implementation LangPickerViewController
 
+@synthesize inSetting;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -62,6 +64,13 @@
     uib_cn.titleLabel.textAlignment = NSTextAlignmentCenter;
     [uib_cn addTarget:self action:@selector(tapCNBtn) forControlEvents:UIControlEventTouchUpInside];
     [uiv_container addSubview: uib_cn];
+    
+    if (inSetting) {
+        uiv_container.frame = CGRectMake(0.0, 40.0, 500, 360);
+        uil_title.frame = CGRectMake(100, 10, 300, 50);
+        uib_en.frame = CGRectMake(50.0, 200, 100, 30);
+        uib_cn.frame = CGRectMake(350.0, 200, 100, 30);
+    }
 }
 
 - (void)tapCNBtn
@@ -69,10 +78,15 @@
     [[NSUserDefaults standardUserDefaults] setValue:@"zh" forKey:@"language"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [TSLanguageManager setSelectedLanguage:kLMChinese];
-    [self dismissViewControllerAnimated:YES
-                             completion:^(void){
-                                 [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
-                             }];
+    if (inSetting) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
+    }
+    else{
+        [self dismissViewControllerAnimated:YES
+                                 completion:^(void){
+                                     [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
+                                 }];
+    }
 }
 
 - (void)tapENBtn
@@ -80,10 +94,15 @@
     [[NSUserDefaults standardUserDefaults] setValue:@"en" forKey:@"language"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [TSLanguageManager setSelectedLanguage:kLMEnglish];
-    [self dismissViewControllerAnimated:YES
-                             completion:^(void){
-                                 [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
-                             }];
+    if (inSetting) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
+    }
+    else{
+        [self dismissViewControllerAnimated:YES
+                                 completion:^(void){
+                                     [[NSNotificationCenter defaultCenter] postNotificationName:@"finishedLang" object:nil];
+                                 }];
+    }
 }
 
 /*

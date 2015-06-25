@@ -7,13 +7,13 @@
 //
 
 #import "SettingTableViewController.h"
-
+#import "LangPickerViewController.h"
 @interface SettingTableViewController ()
 
 @end
 
 @implementation SettingTableViewController
-
+@synthesize arr_settingItems;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -22,6 +22,12 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.tableFooterView = [UIView new];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.view.frame = self.view.superview.bounds;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +44,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 10;
+    return arr_settingItems.count;
 }
 
 
@@ -48,7 +54,19 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableCell"];
     }
     
+    cell.textLabel.text = arr_settingItems[indexPath.row];
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1) {
+        LangPickerViewController *langPicker = [[LangPickerViewController alloc] init];
+        langPicker.inSetting = YES;
+        langPicker.view.frame = self.view.bounds;
+        [self.navigationController pushViewController:langPicker animated:YES];
+    }
 }
 
 

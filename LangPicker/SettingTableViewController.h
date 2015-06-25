@@ -10,4 +10,6 @@
 
 @interface SettingTableViewController : UITableViewController
 
+@property (nonatomic, strong)NSArray        *arr_settingItems;
+
 @end

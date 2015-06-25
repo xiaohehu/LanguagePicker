@@ -13,6 +13,7 @@
 {
     UINavigationController      *navVC;
     UIView                      *uiv_settingContainer;
+    NSMutableArray              *arr_seetingItem;
 }
 @end
 
@@ -27,6 +28,17 @@
     [self createCloseBtn];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    navVC.view.frame = uiv_settingContainer.bounds;
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -38,7 +50,16 @@
     uiv_settingContainer.backgroundColor = [UIColor whiteColor];
     [self.view addSubview: uiv_settingContainer];
     
+    
+    // Setting table's data (items)
+    arr_seetingItem = [[NSMutableArray alloc]initWithObjects:
+                       [TSLanguageManager localizedString:@"Version"],
+                       [TSLanguageManager localizedString:@"Language"],
+                       nil];
+    
+    
     SettingTableViewController *settingTable = [[SettingTableViewController alloc] init];
+    settingTable.arr_settingItems = [[NSArray alloc] initWithArray:arr_seetingItem];
     navVC = [[UINavigationController alloc] initWithRootViewController: settingTable];
     navVC.view.frame = uiv_settingContainer.bounds;
     [uiv_settingContainer addSubview: navVC.view];

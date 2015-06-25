@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2E4A5E3D-EB2D-4757-AF91-539DEE79A599</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>LangPicker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4FDEB2A1B2CCD5A873053FA5DEF00BEC0F0E54C1</key>
 		<string>https://github.com/xiaohehu/LanguagePicker.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>LangPicker.xcodeproj/project.xcworkspace</string>
+	<string>LangPicker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4FDEB2A1B2CCD5A873053FA5DEF00BEC0F0E54C1</key>
