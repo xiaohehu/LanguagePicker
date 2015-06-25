@@ -70,14 +70,13 @@
     NSLog(@"new language is set");
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"]) {
         [self loadAgreement];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     else
     {
         [self dismissViewControllerAnimated:YES completion:^(void){ }];
     }
-    
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)loadAgreement
