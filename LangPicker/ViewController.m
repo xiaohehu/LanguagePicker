@@ -25,6 +25,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLanguage) name:@"finishedLang" object:nil];
+    
+    /*
+     * Check current language setting
+     */
     [TSLanguageManager setSelectedLanguage:kLMDefaultLanguage];
     NSString *language = [NSString new];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"]) {
@@ -46,8 +50,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
+
 }
 
 - (void)didReceiveMemoryWarning {
