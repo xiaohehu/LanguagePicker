@@ -75,6 +75,9 @@
     {
         [self dismissViewControllerAnimated:YES completion:^(void){ }];
     }
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)loadAgreement
